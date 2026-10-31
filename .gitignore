@@ -60,8 +60,11 @@ desktop.ini
 
 # Environment Secrets
 .env
+<<<<<<< HEAD
 .env.*
 !.env.example
+=======
+>>>>>>> origin/main
 .env.*.local
 *.pem
 *.key
