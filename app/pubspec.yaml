@@ -1,0 +1,83 @@
+name: avertiq_viewer
+description: "Avertiq — AI-Powered Disaster Intelligence Viewer App"
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State management
+  provider: ^6.1.2
+
+  # Navigation
+  go_router: ^14.0.0
+
+  # HTTP & WebSocket
+  http: ^1.2.2
+  web_socket_channel: ^3.0.1
+
+  # Local storage
+  sqflite: ^2.3.3+1
+  shared_preferences: ^2.3.2
+  path_provider: ^2.1.4
+  path: ^1.9.0
+
+  # Location & Permissions
+  geolocator: ^13.0.2
+  permission_handler: ^11.3.1
+
+  # Map
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1
+
+  # Image
+  image_picker: ^1.1.2
+
+  # Connectivity
+  connectivity_plus: ^6.0.3
+
+  # UUID
+  uuid: ^4.4.2
+
+  # URL launcher (call / navigate)
+  url_launcher: ^6.3.0
+
+  # Intl
+  intl: ^0.20.2
+
+  # Icons
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/branding/
+
+  # Inter font — place TTF files in assets/fonts/ and uncomment to enable
+  # fonts:
+  #   - family: Inter
+  #     fonts:
+  #       - asset: assets/fonts/Inter-Regular.ttf
+  #         weight: 400
+  #       - asset: assets/fonts/Inter-Medium.ttf
+  #         weight: 500
+  #       - asset: assets/fonts/Inter-SemiBold.ttf
+  #         weight: 600
+  #       - asset: assets/fonts/Inter-Bold.ttf
+  #         weight: 700
+

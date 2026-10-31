@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Variables – Light Theme (default) ─────────────────────────────── */
+:root {
+  --color-bg:         #F2F2F2;
+  --color-surface:    #FFFFFF;
+  --color-border:     #C8D8E4;
+  --color-text:       #19242E;
+  --color-text-muted: #4A5568;
+  --color-primary:    #2B6777;
+  --color-success:    #52AB98;
+  --color-nav-bg:     #FFFFFF;
+  --color-nav-text:   #4A5568;
+  --color-card-bg:    #FFFFFF;
+  --color-card-hover: #F8FAFC;
+  --color-input-bg:   #F2F2F2;
+  --shadow-card: 0 2px 8px rgba(43, 103, 119, 0.08);
+  --shadow-panel: 0 4px 16px rgba(43, 103, 119, 0.08);
+}
+
+/* ─── CSS Variables – Dark Theme ────────────────────────────────────────── */
+.dark {
+  --color-bg:         #07111F;
+  --color-surface:    #0D1826;
+  --color-border:     #1E3149;
+  --color-text:       #E2E8F0;
+  --color-text-muted: #94A3B8;
+  --color-primary:    #38BDF8;
+  --color-success:    #34D399;
+  --color-nav-bg:     #0A1828;
+  --color-nav-text:   #94A3B8;
+  --color-card-bg:    #0D1826;
+  --color-card-hover: #132235;
+  --color-input-bg:   #07111F;
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-panel: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* ─── Base Layer ─────────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* ─── Component Styles ───────────────────────────────────────────────────── */
+.glass-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-panel);
+}
+
+.glass-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+/* ─── Theme-aware Utility Classes ───────────────────────────────────────── */
+.theme-bg        { background-color: var(--color-bg); }
+.theme-surface   { background-color: var(--color-surface); }
+.theme-border    { border-color: var(--color-border); }
+.theme-text      { color: var(--color-text); }
+.theme-text-muted { color: var(--color-text-muted); }
+.theme-input     { background-color: var(--color-input-bg); border-color: var(--color-border); color: var(--color-text); }
+.theme-card      { background-color: var(--color-card-bg); border-color: var(--color-border); }
+.theme-card:hover { background-color: var(--color-card-hover); }
+.theme-nav       { background-color: var(--color-nav-bg); border-color: var(--color-border); }
+
+/* ─── MapLibre Theme Styling ─────────────────────────────────────────────── */
+.maplibregl-popup-content {
+  background: var(--color-surface) !important;
+  color: var(--color-text) !important;
+  border-radius: 8px !important;
+  padding: 12px 14px !important;
+  border: 1px solid var(--color-border) !important;
+  box-shadow: 0 10px 25px -5px rgba(43, 103, 119, 0.15) !important;
+}
+
+.maplibregl-popup-anchor-top    .maplibregl-popup-tip { border-bottom-color: var(--color-surface) !important; }
+.maplibregl-popup-anchor-bottom .maplibregl-popup-tip { border-top-color:    var(--color-surface) !important; }
+.maplibregl-popup-anchor-left   .maplibregl-popup-tip { border-right-color:  var(--color-surface) !important; }
+.maplibregl-popup-anchor-right  .maplibregl-popup-tip { border-left-color:   var(--color-surface) !important; }
+
+/* ─── Custom Scrollbar ───────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-muted); }
+
+/* ─── Notification Toast Animation ──────────────────────────────────────── */
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+.notif-enter { animation: slideInRight 0.35s ease-out; }
+
+/* ─── Priority Badge Pulse ───────────────────────────────────────────────── */
+@keyframes criticalPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(239, 48, 56, 0.4); }
+  50%       { box-shadow: 0 0 0 6px rgba(239, 48, 56, 0); }
+}
+.critical-pulse { animation: criticalPulse 2s ease-in-out infinite; }

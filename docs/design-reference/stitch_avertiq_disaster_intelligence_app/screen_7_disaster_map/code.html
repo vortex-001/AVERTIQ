@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#ffdad5", "on-secondary-container": "#002956", "on-secondary-fixed-variant": "#00468a", "background": "#0d141d", "on-primary": "#690003", "on-tertiary-fixed-variant": "#842500", "secondary-container": "#3790ff", "secondary-fixed": "#d6e3ff", "on-primary-fixed-variant": "#930005", "on-primary-container": "#5c0002", "on-tertiary-fixed": "#3a0b00", "surface-container-high": "#242a34", "tertiary-fixed": "#ffdbd0", "surface-container-lowest": "#080f18", "surface-container-low": "#151c26", "surface-container": "#19202a", "inverse-primary": "#c0000a", "primary-container": "#ff5545", "on-tertiary": "#5e1800", "tertiary-container": "#f75f29", "surface-bright": "#333a44", "error-container": "#93000a", "on-error": "#690005", "secondary-fixed-dim": "#a8c8ff", "surface-tint": "#ffb4aa", "outline-variant": "#5e3f3b", "on-surface-variant": "#e8bcb6", "on-primary-fixed": "#410001", "inverse-on-surface": "#2a313b", "on-surface": "#dce3f0", "secondary": "#a8c8ff", "primary": "#ffb4aa", "on-secondary": "#003062", "primary-fixed-dim": "#ffb4aa", "surface-dim": "#0d141d", "on-background": "#dce3f0", "surface-variant": "#2e353f", "tertiary-fixed-dim": "#ffb59e", "tertiary": "#ffb59e", "surface-container-highest": "#2e353f", "outline": "#ae8882", "on-tertiary-container": "#521400", "on-secondary-fixed": "#001b3c", "on-error-container": "#ffdad6", "inverse-surface": "#dce3f0", "surface": "#0d141d", "error": "#ffb4ab" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1.25rem", "space-xl": "1.5rem", "gutter": "1rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "0.75rem", "gutter-mobile": "0.75rem", "space-lg": "1rem" }, "fontFamily": { "body-md": ["Inter"], "headline-lg": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "headline-xl": ["Space Grotesk"], "label-sm": ["JetBrains Mono"], "label-md": ["JetBrains Mono"], "label-lg": ["JetBrains Mono"], "headline-md": ["Space Grotesk"], "headline-xl-mobile": ["Space Grotesk"], "body-lg": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "500" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }], "label-lg": ["13px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.4)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Avertiq Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1UMUTO5IOhqSkV4KG2u5uIsccD0tT8qLNiLYiVEdyeTSvmtPnt-HPQz0YjWLdyek7er1xgsYRHI8MKsXeVPYnQ2bSCwJygFwUYzedm-2U51GS1GYcqVQUDjv0DBXpQtf8aqbhlPO4B3owCATwSoul-yO7JkmCWVIvu94x5qxhVd5jVEP6uL_muVhxApB-rxCul-ygW8oixuhJBbGNO-Rq3hvPmG4wgAxvDjv1bbFZ5q"/><div class="flex flex-col min-w-0"><span class="font-headline-md text-headline-md tracking-tight text-on-surface leading-none truncate">Avertiq</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate opacity-80 uppercase">Map</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="flex items-center gap-1.5 px-2 py-1 rounded-full bg-surface-container-high/80 backdrop-blur-md shadow-inner"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500 shadow-[0_0_8px_#10b981]"></span></span><span class="font-label-sm text-label-sm text-emerald-400 font-semibold tracking-wider whitespace-nowrap">ONLINE • GPS ACTIVE</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full relative">
+<!-- Top Floating HUD Controls -->
+<div class="relative z-20 px-gutter-mobile pt-space-sm pb-space-xs flex flex-col gap-space-xs bg-gradient-to-b from-surface-container-lowest/90 via-surface-container-lowest/60 to-transparent backdrop-blur-md">
+<!-- Tactical Search Field -->
+<div class="relative flex items-center w-full">
+<div class="absolute left-3 flex items-center pointer-events-none text-secondary">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-12 pl-10 pr-24 rounded-lg bg-surface-container-high/90 text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/50 focus:outline-none focus:bg-surface-container-highest shadow-md transition-all" id="mapSearchInput" placeholder="Search hazards, shelters, hospitals..." type="text"/>
+<div class="absolute right-2 flex items-center gap-1">
+<button aria-label="Voice Search" class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</button>
+<button aria-label="Clear or Filters" class="w-8 h-8 rounded-lg flex items-center justify-center bg-surface-container-low text-secondary hover:text-on-surface transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Telemetry Filter Scroll Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto py-1 no-scrollbar text-nowrap">
+<button class="filter-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary-container shadow-sm active:scale-95 transition-all" data-filter="all" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-on-secondary-container"></span>
+<span class="font-label-md text-label-md">ALL (ACTIVE)</span>
+</button>
+<button class="filter-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant active:scale-95 transition-all hover:text-on-surface" data-filter="flood" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md">FLOOD HAZARD</span>
+</button>
+<button class="filter-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant active:scale-95 transition-all hover:text-on-surface" data-filter="fire" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span class="font-label-md text-label-md">ACTIVE FIRE</span>
+</button>
+<button class="filter-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant active:scale-95 transition-all hover:text-on-surface" data-filter="quake" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-label-md text-label-md">LANDSLIDE/QUAKE</span>
+</button>
+<button class="filter-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant active:scale-95 transition-all hover:text-on-surface" data-filter="centers" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md">RELIEF CENTERS</span>
+</button>
+</div>
+</div>
+<!-- Primary Interactive Map Canvas Area -->
+<div class="relative w-full h-[520px] overflow-hidden select-none bg-surface-container-lowest">
+<!-- Static Geospatial Background Tile Fallback Simulation -->
+<div class="absolute inset-0 w-full h-full opacity-35 filter saturate-150 contrast-125" data-location="Dehradun, Uttarakhand, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCC_HExjwYl1eQd-1OFHvURs0qSOdFsYB3Xndwf7oH1DPen4U_sm4PCxYCsA2C4xICcpiFs0D1xqsoi19Uvn3TcbN68xJsO-4jB7r2S0qf4FmaPc1VQr2dP5KTqTPWcOjW_R-fDBRF8c8sC9E8tyt3nqxSW0AijTC--NBBPZYXGLpkVKWom8HT1crpLB_cVy8HhJmzSuzxbFx8SNML_X1G8dxndTEXOZbTz0Fz-0B8')"></div>
+<!-- Tactical Vector Grid & River Bathymetry Simulation -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#242a34" stroke-opacity="0.4" stroke-width="0.75"></path>
+</pattern>
+<radialgradient cx="50%" cy="50%" id="inundationGlow" r="50%">
+<stop offset="0%" stop-color="#ff5545" stop-opacity="0.5"></stop>
+<stop offset="70%" stop-color="#f75f29" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#ff5545" stop-opacity="0.02"></stop>
+</radialgradient>
+<lineargradient id="evacPath" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#3790ff"></stop>
+<stop offset="100%" stop-color="#a8c8ff"></stop>
+</lineargradient>
+</defs>
+<!-- Coordinate Mesh Pattern -->
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+<!-- River Vector Flow (Rispana Basin Trace) -->
+<path d="M-20,110 C80,140 120,240 180,290 C240,340 310,380 430,420" fill="none" stroke="#00468a" stroke-linecap="round" stroke-opacity="0.45" stroke-width="9"></path>
+<path d="M-20,110 C80,140 120,240 180,290 C240,340 310,380 430,420" fill="none" stroke="#3790ff" stroke-linecap="round" stroke-opacity="0.7" stroke-width="3"></path>
+<!-- Active Inundation Danger Hazard Zone Polygon -->
+<polygon class="animate-pulse" fill="url(#inundationGlow)" points="90,140 210,180 270,300 230,380 120,340 60,250" stroke="#ff5545" stroke-dasharray="4 2" stroke-width="1.5"></polygon>
+<!-- Proposed Escape / Evac Trajectory Line -->
+<path d="M190,95 Q 260,110 315,190 T 330,340" fill="none" id="escapeLine" stroke="url(#evacPath)" stroke-dasharray="6 4" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+<!-- Zone Floating Title Over Danger Polygon -->
+<div class="absolute top-[230px] left-[70px] pointer-events-none z-10 flex flex-col items-center">
+<div class="px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary-container animate-bounce">warning</span>
+<span class="font-label-sm text-label-sm text-primary-fixed tracking-wider font-semibold">RISPANA INUNDATION BASIN</span>
+</div>
+<span class="font-label-sm text-[9px] text-tertiary-fixed tracking-widest mt-0.5 uppercase opacity-80">SURGE SPEED: 2.3m/s</span>
+</div>
+<!-- MARKER 1: Current User Location ("You: Rajpur Rd") -->
+<div class="absolute top-[80px] left-[175px] z-20 flex flex-col items-center -translate-x-1/2 -translate-y-1/2 group cursor-pointer" onclick="toggleDetails('user')">
+<!-- Radar Pulse Ring -->
+<div class="relative flex items-center justify-center">
+<span class="absolute w-12 h-12 rounded-full bg-secondary-container/20 animate-ping"></span>
+<span class="absolute w-7 h-7 rounded-full bg-secondary-container/40"></span>
+<span class="relative w-4 h-4 rounded-full bg-secondary-container shadow-[0_0_12px_#3790ff] flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-on-secondary-container"></span>
+</span>
+</div>
+<!-- Chip -->
+<div class="mt-1 px-2 py-0.5 rounded-full bg-surface-container-high/95 backdrop-blur-md shadow-md flex items-center gap-1 text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-bold whitespace-nowrap">YOU • RAJPUR RD</span>
+</div>
+</div>
+<!-- MARKER 2: Red SOS Alert Marker ("SOS #9842 (Trapped 2p)") -->
+<div class="absolute top-[200px] left-[130px] z-20 flex flex-col items-center -translate-x-1/2 -translate-y-1/2 cursor-pointer active:scale-90 transition-transform" onclick="toggleDetails('sos')">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-[0_0_14px_rgba(255,85,69,0.7)] animate-pulse">
+<span class="material-symbols-outlined text-[18px]">emergency</span>
+</div>
+<div class="mt-1 px-1.5 py-0.5 rounded-md bg-error-container/95 text-on-error-container shadow-md flex items-center gap-1">
+<span class="font-label-sm text-label-sm font-bold tracking-tight">SOS #9842 (2P)</span>
+</div>
+</div>
+<!-- MARKER 3: Amber Hazard Marker ("Blocked Road / Landslide") -->
+<div class="absolute top-[160px] left-[270px] z-20 flex flex-col items-center -translate-x-1/2 -translate-y-1/2 cursor-pointer active:scale-90 transition-transform" onclick="toggleDetails('hazard')">
+<div class="w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center shadow-[0_0_12px_rgba(247,95,41,0.5)]">
+<span class="material-symbols-outlined text-[18px]">landslide</span>
+</div>
+<div class="mt-1 px-1.5 py-0.5 rounded-md bg-surface-container-high/95 text-tertiary-fixed shadow-md flex items-center gap-1">
+<span class="font-label-sm text-label-sm font-medium">SLIDE BLOCKED</span>
+</div>
+</div>
+<!-- MARKER 4: Green Cross Marker ("Doone Hospital Trauma Center") -->
+<div class="absolute top-[330px] left-[325px] z-20 flex flex-col items-center -translate-x-1/2 -translate-y-1/2 cursor-pointer active:scale-90 transition-transform" onclick="toggleDetails('hospital')">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shadow-[0_0_12px_rgba(168,200,255,0.6)]">
+<span class="material-symbols-outlined text-[18px] text-on-secondary-fixed-variant">local_hospital</span>
+</div>
+<div class="mt-1 px-2 py-0.5 rounded-md bg-surface-container-high/95 text-on-surface shadow-md flex items-center gap-1">
+<span class="font-label-sm text-label-sm font-semibold">DOON HOSPITAL</span>
+</div>
+</div>
+<!-- MARKER 5: Blue Shield Marker ("Police Outpost 02") -->
+<div class="absolute top-[75px] left-[310px] z-20 flex flex-col items-center -translate-x-1/2 -translate-y-1/2 cursor-pointer active:scale-90 transition-transform" onclick="toggleDetails('police')">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-secondary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[16px]">local_police</span>
+</div>
+<div class="mt-0.5 px-1.5 py-0.5 rounded bg-surface-container-low/90 text-on-surface-variant font-label-sm text-[9px]">
+        POLICE 02
+      </div>
+</div>
+<!-- MARKER 6: Purple / Lilac Shelter Tent Marker ("Relief Camp 01") -->
+<div class="absolute top-[385px] left-[155px] z-20 flex flex-col items-center -translate-x-1/2 -translate-y-1/2 cursor-pointer active:scale-90 transition-transform" onclick="toggleDetails('shelter')">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-[0_0_10px_rgba(168,200,255,0.4)]">
+<span class="material-symbols-outlined text-[18px]">cabin</span>
+</div>
+<div class="mt-1 px-1.5 py-0.5 rounded-md bg-surface-container-high/95 text-on-surface shadow-md flex items-center gap-1">
+<span class="font-label-sm text-label-sm font-bold">RELIEF CAMP 01</span>
+</div>
+</div>
+<!-- Floating Tactical Layer & Telemetry Overlays (Right Side Stack) -->
+<div class="absolute right-3 top-3 z-30 flex flex-col gap-2">
+<!-- Layer Switcher Button -->
+<div class="relative group">
+<button aria-label="Toggle Layer Modes" class="w-11 h-11 rounded-lg bg-surface-container-high/90 backdrop-blur-md text-on-surface flex items-center justify-center shadow-lg active:scale-95 transition-all" id="layerToggleBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+</button>
+<!-- Popover layer pill -->
+<div class="hidden absolute right-12 top-0 bg-surface-container-high/95 backdrop-blur-md rounded-lg shadow-xl p-1 flex-col gap-1 w-28" id="layerDropdown">
+<button class="w-full text-left px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm" type="button">MESH TACTICAL</button>
+<button class="w-full text-left px-2 py-1 rounded hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm" type="button">SATELLITE 4K</button>
+<button class="w-full text-left px-2 py-1 rounded hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm" type="button">TOPO HYDRO</button>
+</div>
+</div>
+<!-- Recenter GPS Precision Anchor -->
+<button aria-label="Recenter GPS" class="w-11 h-11 rounded-lg bg-surface-container-high/90 backdrop-blur-md text-secondary flex items-center justify-center shadow-lg active:scale-90 transition-transform" id="recenterGpsBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">my_location</span>
+</button>
+<!-- Zoom In / Zoom Out Stack -->
+<div class="flex flex-col rounded-lg bg-surface-container-high/90 backdrop-blur-md shadow-lg overflow-hidden">
+<button aria-label="Zoom In" class="w-11 h-10 flex items-center justify-center text-on-surface hover:text-secondary active:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<div class="w-full h-[1px] bg-surface-container"></div>
+<button aria-label="Zoom Out" class="w-11 h-10 flex items-center justify-center text-on-surface hover:text-secondary active:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+</div>
+</div>
+<!-- Floating Live Cache & Telemetry Diagnostic Badge (Left Bottom) -->
+<div class="absolute left-3 bottom-3 z-30 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-surface-container-lowest/85 backdrop-blur-md shadow-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary">cloud_download</span>
+<span class="font-label-sm text-label-sm">OFFLINE CACHE: 14 MB (ACTIVE)</span>
+</div>
+</div>
+<!-- Bottom Tactical Dock & Interactive Legend Sheet -->
+<div class="w-full bg-surface-container-low px-gutter-mobile pt-space-md pb-space-lg flex flex-col gap-space-md shadow-[0_-8px_24px_rgba(0,0,0,0.4)]">
+<!-- Pull Bar Indicator -->
+<div class="w-10 h-1 rounded-full bg-surface-container-highest mx-auto"></div>
+<!-- Active Perimeter Threat Banner -->
+<div class="w-full rounded-xl bg-surface-container-high p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm animate-pulse">
+<span class="material-symbols-outlined text-[22px]">notification_important</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md text-primary">PERIMETER ALERT</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/20 text-primary font-label-sm text-[10px] uppercase font-bold tracking-wider">1.4 KM DISTANCE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+            You are 1.4 km from active inundation boundary. Safe vector cleared along Eastern ridge to Doon Hospital.
+          </p>
+</div>
+</div>
+<!-- Action Button Group -->
+<div class="grid grid-cols-5 gap-space-xs mt-1">
+<button class="col-span-4 h-12 rounded-lg bg-primary-container text-on-primary font-headline-md text-headline-md font-semibold tracking-wide flex items-center justify-center gap-2 shadow-[0_0_16px_rgba(255,85,69,0.35)] active:scale-[0.98] transition-all" id="evacBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">navigation</span>
+          START EVACUATION ROUTE
+        </button>
+<button aria-label="Share Location Coords" class="col-span-1 h-12 rounded-lg bg-surface-container-highest text-secondary flex items-center justify-center hover:text-on-surface transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px]">share_location</span>
+</button>
+</div>
+</div>
+<!-- Horizontal Tactical Legend Bar -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 tracking-widest uppercase">MAP TELEMETRY SYMBOLOGY</span>
+<div class="flex items-center justify-between gap-1 overflow-x-auto py-1 no-scrollbar">
+<!-- Legend Item 1 -->
+<div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container flex-shrink-0">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container shadow-[0_0_6px_#3790ff]"></span>
+<span class="font-label-sm text-label-sm text-on-surface">You (±3m)</span>
+</div>
+<!-- Legend Item 2 -->
+<div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container flex-shrink-0">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_6px_#ff5545]"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Hazard Zone</span>
+</div>
+<!-- Legend Item 3 -->
+<div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container flex-shrink-0">
+<span class="material-symbols-outlined text-[13px] text-secondary-fixed">local_hospital</span>
+<span class="font-label-sm text-label-sm text-on-surface">Hospital</span>
+</div>
+<!-- Legend Item 4 -->
+<div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container flex-shrink-0">
+<span class="material-symbols-outlined text-[13px] text-secondary">cabin</span>
+<span class="font-label-sm text-label-sm text-on-surface">Shelter</span>
+</div>
+<!-- Legend Item 5 -->
+<div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container flex-shrink-0">
+<span class="material-symbols-outlined text-[13px] text-tertiary-container">emergency</span>
+<span class="font-label-sm text-label-sm text-on-surface">SOS Distress</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Marker Detail Modal Toast (Hidden by default) -->
+<div class="fixed bottom-24 left-4 right-4 z-40 hidden transform transition-all duration-300" id="markerToast">
+<div class="w-full bg-surface-container-high/95 backdrop-blur-xl p-space-md rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.6)] flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-primary-container text-on-primary" id="toastIconContainer">
+<span class="material-symbols-outlined text-[22px]" id="toastIcon">info</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h4 class="font-headline-md text-headline-md text-on-surface truncate" id="toastTitle">Marker Selected</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate" id="toastSubtitle">Telemetry info loaded</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface active:scale-95" onclick="closeToast()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Tactical Filter Pill Interactions
+  const filterPills = document.querySelectorAll('.filter-pill');
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach(p => {
+        p.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+        p.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+      });
+      pill.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+      pill.classList.add('bg-secondary-container', 'text-on-secondary-container');
+    });
+  });
+
+  // Layer Dropdown Toggle
+  const layerBtn = document.getElementById('layerToggleBtn');
+  const layerDropdown = document.getElementById('layerDropdown');
+  if (layerBtn && layerDropdown) {
+    layerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      layerDropdown.classList.toggle('hidden');
+      layerDropdown.classList.toggle('flex');
+    });
+    document.addEventListener('click', () => {
+      layerDropdown.classList.add('hidden');
+      layerDropdown.classList.remove('flex');
+    });
+  }
+
+  // Recenter GPS Button Animation & Pulse Feedback
+  const recenterBtn = document.getElementById('recenterGpsBtn');
+  if (recenterBtn) {
+    recenterBtn.addEventListener('click', () => {
+      showToast('GPS Recalibrated', 'Target locked on Rajpur Rd (±3m precision)', 'my_location', 'bg-secondary-container', 'text-on-secondary-container');
+    });
+  }
+
+  // Evacuation Trajectory Button Trigger
+  const evacBtn = document.getElementById('evacBtn');
+  if (evacBtn) {
+    evacBtn.addEventListener('click', () => {
+      showToast('Evacuation Vector Engaged', 'Turn-by-turn guidance active toward Doon Hospital', 'navigation', 'bg-primary-container', 'text-on-primary');
+    });
+  }
+
+  // Marker Telemetry Data Handler
+  const markerData = {
+    user: {
+      title: 'Current Position: Rajpur Rd',
+      sub: 'Status: Safe • Elevation: 640m • Signal: 5G Mesh',
+      icon: 'person_pin_circle',
+      bg: 'bg-secondary-container',
+      color: 'text-on-secondary-container'
+    },
+    sos: {
+      title: 'Active Distress #9842',
+      sub: '2 Persons Trapped • Rising Water level • Dispatch alerted',
+      icon: 'emergency',
+      bg: 'bg-primary-container',
+      color: 'text-on-primary'
+    },
+    hazard: {
+      title: 'Landslide Debris Blockage',
+      sub: 'Mussoorie Bypass Sector 4 • Road Impassable',
+      icon: 'landslide',
+      bg: 'bg-tertiary-container',
+      color: 'text-on-tertiary'
+    },
+    hospital: {
+      title: 'Doon Hospital Trauma Center',
+      sub: '34 Beds Available • Emergency triage operational',
+      icon: 'local_hospital',
+      bg: 'bg-secondary-fixed',
+      color: 'text-on-secondary-fixed-variant'
+    },
+    police: {
+      title: 'Police Outpost 02 (Traffic Control)',
+      sub: 'Officers on site • Evacuation traffic diverted',
+      icon: 'local_police',
+      bg: 'bg-surface-container-highest',
+      color: 'text-secondary'
+    },
+    shelter: {
+      title: 'Relief Camp 01 (Public School)',
+      sub: 'Capacity 450 • Food, Clean Water & Power Available',
+      icon: 'cabin',
+      bg: 'bg-secondary',
+      color: 'text-on-secondary'
+    }
+  };
+
+  function toggleDetails(key) {
+    const item = markerData[key];
+    if (!item) return;
+    showToast(item.title, item.sub, item.icon, item.bg, item.color);
+  }
+
+  function showToast(title, subtitle, icon, bgClass, textClass) {
+    const toast = document.getElementById('markerToast');
+    const toastTitle = document.getElementById('toastTitle');
+    const toastSub = document.getElementById('toastSubtitle');
+    const toastIcon = document.getElementById('toastIcon');
+    const iconContainer = document.getElementById('toastIconContainer');
+
+    toastTitle.textContent = title;
+    toastSub.textContent = subtitle;
+    toastIcon.textContent = icon;
+
+    iconContainer.className = `w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${bgClass} ${textClass}`;
+
+    toast.classList.remove('hidden');
+    clearTimeout(window.toastTimer);
+    window.toastTimer = setTimeout(() => {
+      closeToast();
+    }, 4500);
+  }
+
+  function closeToast() {
+    const toast = document.getElementById('markerToast');
+    if (toast) toast.classList.add('hidden');
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.5)]" data-active-classes="text-secondary bg-surface-container-high/60"><div class="grid grid-cols-5 items-center h-20 px-space-xs max-w-lg mx-auto"><a class="flex flex-col items-center justify-center h-14 min-w-[48px] rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-sm text-label-sm mt-1">Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center h-14 min-w-[48px] rounded-lg transition-colors text-secondary bg-surface-container-high/60" data-path="map" href="#"><span class="material-symbols-outlined text-[24px]">explore</span><span class="font-label-sm text-label-sm mt-1">Map</span></a><div class="flex flex-col items-center justify-center relative"><a class="flex flex-col items-center justify-center -top-3 absolute w-14 h-14 rounded-full bg-primary-container text-on-primary shadow-[0_0_20px_rgba(255,85,69,0.55)] active:scale-95 transition-transform" data-path="sos" href="#"><span class="material-symbols-outlined text-[26px] font-bold animate-pulse">e911_emergency</span><span class="font-label-sm text-label-sm font-bold tracking-widest text-on-primary">SOS</span></a><span class="h-14"></span></div><a class="flex flex-col items-center justify-center h-14 min-w-[48px] rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="help" href="#"><span class="material-symbols-outlined text-[24px]">volunteer_activism</span><span class="font-label-sm text-label-sm mt-1">Help</span></a><a class="flex flex-col items-center justify-center h-14 min-w-[48px] rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[24px]">assignment_late</span><span class="font-label-sm text-label-sm mt-1">Reports</span></a></div></nav></body></html>
