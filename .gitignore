@@ -59,6 +59,7 @@ Thumbs.db
 desktop.ini
 
 # Environment Secrets
+.env
 .env.*
 !.env.example
 .env.*.local
